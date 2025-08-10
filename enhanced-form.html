@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #555;
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            background-color: #fafafa;
+            padding: 15px;
+            border: 1px solid #ccc;
+            max-width: 600px;
+            margin: auto;
+        }
+        fieldset {
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced Form Example</h1>
+    <p>A demo page combining lists, tables, media, and a complete HTML5 form.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Course Modules</h2>
+        <ul>
+            <li>HTML Basics</li>
+            <li>CSS Styling</li>
+            <li>JavaScript Fundamentals</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Student Scores Table</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Module</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>HTML Basics</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>CSS Styling</td>
+                <td>88</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Course Introduction Video</h2>
+        <video controls>
+            <source src="intro.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="idnum">Student ID (Read-Only):</label>
+                <input type="text" id="idnum" name="idnum" value="STU12345" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Preferences</legend>
+                <label for="module">Select Module:</label>
+                <select id="module" name="module" required>
+                    <option value="">--Choose--</option>
+                    <option value="html">HTML Basics</option>
+                    <option value="css">CSS Styling</option>
+                    <option value="js">JavaScript Fundamentals</option>
+                </select>
+
+                <label>Preferred Study Time:</label>
+                <input type="radio" id="morning" name="studytime" value="morning" required>
+                <label for="morning">Morning</label>
+                <input type="radio" id="evening" name="studytime" value="evening">
+                <label for="evening">Evening</label>
+
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Write here..."></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Setup</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="6" required>
+
+                <label for="profilepic">Upload Profile Picture:</label>
+                <input type="file" id="profilepic" name="profilepic" accept="image/*">
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 HTML5 Form Demo</p>
+</footer>
+
+</body>
+</html>
